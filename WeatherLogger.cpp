@@ -11,6 +11,7 @@ int main() {
     bool running = true;
 
     while (running) {
+        std::cout << "**************************\n";
         std::cout << "What Do You Want To Do?:\n";
         std::cout << "1. Show Temperatures\n";
         std::cout << "2. Enter More Temperatures\n";
@@ -32,20 +33,20 @@ int main() {
                 }
 
                 while (true) {
-                  std::cout << "Enter Your Temperature Or 'Q' To Quit: ";
-                  std::cin >> tempo;
+                    std::cout << "Enter Your Temperature Or 'Q' To Quit: ";
+                    std::cin >> tempo;
 
-                  if (tempo == "Q" || tempo == "q")
-                  {
+                    if (tempo == "Q" || tempo == "q")
+                    {
 
                     break;
 
-                  }
+                    }
                     
-                  temp = std::stod(tempo);
-                  fileOut << temp << '\n';
+                    temp = std::stod(tempo);
+                    fileOut << temp << '\n';
 
-                  }
+                    }
 
                 fileOut.close();
                 break;
