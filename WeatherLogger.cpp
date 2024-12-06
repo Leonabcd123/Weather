@@ -5,7 +5,6 @@ void showTemperatures();
 
 int main() {
     std::string tempo;
-    int numOfTemp;
     double temp;
     int choice;
     int counter = 0;
