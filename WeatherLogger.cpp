@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 
+void setupTemperatures();
 void showTemperatures();
 
 int main() {
@@ -9,6 +10,8 @@ int main() {
     int choice;
     int counter = 0;
     bool running = true;
+
+    setupTemperatures();
 
     while (running) {
         std::cout << "**************************\n";
@@ -30,6 +33,7 @@ int main() {
                 if (!fileOut.is_open()) {
                     std::cerr << "File Could Not Be Opened\n";
                     return 1;
+                    break;
                 }
 
                 while (true) {
@@ -77,6 +81,18 @@ int main() {
     }
 
     return 0;
+}
+
+void setupTemperatures(){
+
+    std::ifstream fileIn("weather.txt");
+
+    if (!fileIn.is_open()) {
+        std::ofstream fileOut("weather.txt");
+        fileOut.close();
+    }
+
+    fileIn.close();
 }
 
 void showTemperatures() {
