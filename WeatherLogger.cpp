@@ -33,24 +33,27 @@ int main() {
                 if (!fileOut.is_open()) {
                     std::cerr << "File Could Not Be Opened\n";
                     return 1;
-                    break;
                 }
 
                 while (true) {
                     std::cout << "Enter Your Temperature Or 'Q' To Quit: ";
                     std::cin >> tempString;
 
-                    if (tempString == "Q" || tempString == "q")
-                    {
-
-                    break;
-
+                    if (tempString == "Q" || tempString == "q") {
+                        break;
                     }
-                    
-                    temp = std::stod(tempString);
-                    fileOut << temp << '\n';
 
+                    try {
+                        temp = std::stod(tempString);
+                        fileOut << temp << '\n';
+                    } catch (const std::invalid_argument&) {
+                        std::cout << "Please Enter A Valid Number.\n";
+                        continue;
+                    } catch (const std::out_of_range&) {
+                        std::cout << "Number is too large or too small.\n";
+                        continue;
                     }
+                }
 
                 fileOut.close();
                 break;
