@@ -34,13 +34,14 @@ g++ -o temperature_logger temperature_logger.cpp
 ## Usage
 Upon running the program, the user will be presented with a menu:
 
-markdown
+```markdown
 **************************
 What Do You Want To Do?:
 1. Show Temperatures
 2. Enter More Temperatures
 3. Delete All Temperatures
 4. Quit
+```
 ### Option 1: Show Temperatures
 - Displays the temperatures recorded so far, along with the average temperature.
 ### Option 2: Enter More Temperatures
@@ -50,7 +51,7 @@ What Do You Want To Do?:
 ### Option 4: Quit
 - Exits the program.
 ## Example Interaction:
-mathematica
+```mathematica
 **************************
 What Do You Want To Do?:
 1. Show Temperatures
@@ -71,6 +72,7 @@ What Do You Want To Do?:
 Day 1: 25.5
 Day 2: 30.2
 The Average Is: 27.85
+```
 ## How It Works
 - setupTemperatures(): Ensures that the weather.txt file exists. If it doesn't, it creates the file.
 - showTemperatures(): Reads the temperature data from weather.txt, displays each temperature, and calculates the average.
