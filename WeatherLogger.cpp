@@ -50,7 +50,7 @@ int main() {
                         std::cout << "Please Enter A Valid Number.\n";
                         continue;
                     } catch (const std::out_of_range&) {
-                        std::cout << "Number is too large or too small.\n";
+                        std::cout << "Number Is Too Large Or Too Small.\n";
                         continue;
                     }
                 }
