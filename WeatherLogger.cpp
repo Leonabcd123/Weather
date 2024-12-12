@@ -5,7 +5,7 @@ void setupTemperatures();
 void showTemperatures();
 
 int main() {
-    std::string tempo;
+    std::string tempString;
     double temp;
     int choice;
     int counter = 0;
@@ -38,16 +38,16 @@ int main() {
 
                 while (true) {
                     std::cout << "Enter Your Temperature Or 'Q' To Quit: ";
-                    std::cin >> tempo;
+                    std::cin >> tempString;
 
-                    if (tempo == "Q" || tempo == "q")
+                    if (tempString == "Q" || tempString == "q")
                     {
 
                     break;
 
                     }
                     
-                    temp = std::stod(tempo);
+                    temp = std::stod(tempString);
                     fileOut << temp << '\n';
 
                     }
